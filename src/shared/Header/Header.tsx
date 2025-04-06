@@ -1,13 +1,16 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux'; // Импортируем хук useDispatch и useSelector
-import { setTheme } from '../../redux/ThemeSlice'; // Импортируем экшен для переключения темы
+import { useDispatch, useSelector } from 'react-redux';
+import { setTheme } from '../../redux/ThemeSlice'; 
 import { RootState } from '../../redux/store';
-import GlobalSvgSelector from '../../assets/icons/global/GlobalSvgSelector';
+
 import CreatableSelect from 'react-select/creatable';
 import { AppDispatch } from '../../redux/store';
 import { fetchWeather } from '../../redux/weatherThunks';
 import { setCity } from '../../redux/WeatherSlice';
-import styles from './Header.module.scss'
+import styles from './Header.module.scss';
+import logo from '../../assets/images/sun.svg';
+import changeTheme from '../../assets/images/d-n.png';
+
 
 function Header() {
   const dispatch = useDispatch<AppDispatch>();
@@ -20,18 +23,14 @@ function Header() {
     }
   }, [dispatch]);
 
-  // Переключение темы и сохранение в localStorage
+  
   const handleChangeTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     dispatch(setTheme(newTheme));
 
     localStorage.setItem('theme', newTheme);
   };
-
-  // interface Option {
-  //   value: string;
-  //   label: string;
-  // }
+  
   const cities = [
     { value: 'Київ', label: 'Київ' },
     { value: 'Львів', label: 'Львів' },
@@ -118,13 +117,13 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.wrapper}>
         <div className={styles.logo}>
-          <GlobalSvgSelector id="header-logo" />
+        <img src={logo} alt="Header Logo" />
         </div>
         <div className={styles.title}>Weather</div>
       </div>
       <div className={styles.wrapper}>
         <div className={styles.change_theme} onClick={handleChangeTheme}>
-          <GlobalSvgSelector id="change_theme" />
+        <img src={changeTheme} alt="change_theme"/>
         </div>
         <CreatableSelect
           options={cities}
