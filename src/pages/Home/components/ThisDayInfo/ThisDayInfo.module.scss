@@ -1,0 +1,39 @@
+@import '../../../../styles/variables.scss';
+
+.thisDayInfo {
+  flex: 1 1 700px;
+  padding: 20px;
+  background-color: var(--components-background-default);
+  box-shadow: var(--card-shadow-default);
+  border-radius: $border-radius;
+  @media (max-width: 750px) {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &:not(:last-child) {
+    padding-bottom: 20px;
+  }
+  h4 {
+    color: var(--text-color-default);
+    padding-left: 10px;
+  }
+}
+.img {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 22px;
+    height: 22px;
+  }
+}

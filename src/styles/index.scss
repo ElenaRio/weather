@@ -1,0 +1,22 @@
+@import './reset.scss';
+@import './variables.scss'; 
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #c3e0ff; 
+  }
+
+  body.dark {
+    --container-bg-default: var(--container-ackground-dark);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 10px auto;
+    border-radius: $border-radius;
+    background-color: var(--container-background-default);
+    padding: 0 20px 20px 20px;
+    box-shadow: $box-shadow;
+  }
+
+

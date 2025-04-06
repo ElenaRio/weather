@@ -1,0 +1,45 @@
+$light-background: #fff;
+$primary-color: #4793ff;
+$light-color: #000;
+$base-color: #939cb0;
+$box-shadow: 2px 5px 25px -3px rgb(180, 180, 180, 0.25);
+$border-radius: 20px;
+
+$container-background-dark: #181818;
+$container-background-light: #fff;
+
+$components-background-dark: #3a3939;
+$components-background-light: #fff;
+
+$card-background-light: rgba(71, 147, 255, 0.28);
+$card-background-dark: #2e3035;
+
+$card-shadow-light: 2px 5px 25px -3px rgb(180, 180, 180, 0.25);
+$card-shadow-dark: 2px 5px 25px -3px rgb(180, 180, 180, 0.25);
+
+$text-color-light: #000;
+$text-color-dark: #fff;
+
+:root {
+  // контейнер
+  --container-background-light: #{$container-background-light};
+  --container-background-dark: #{$container-background-dark};
+  --container-background-default: var(--container-background-light);
+  //  компонент
+  --components-background-light: #{$components-background-light};
+  --components-background-dark: #{$components-background-dark};
+  --components-background-default: var(--components-background-light);
+  // карточка
+  --card-background-light: #{$card-background-light};
+  --card-background-dark: #{$card-background-dark};
+  --card-background-default: var(--card-background-light);
+  // тень
+  --card-shadow-light: #{$card-shadow-light};
+  --card-shadow-dark: #{$card-shadow-dark};
+  --card-shadow-default: var(--card-shadow-light);
+
+  // текст
+  --text-color-light: #{$text-color-light};
+  --text-color-dark: #{$text-color-dark};
+  --text-color-default: var(--text-color-light);
+}
