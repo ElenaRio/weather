@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';  
 import App from './App';
 import "./styles/index.scss"
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(
@@ -13,9 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
      <Provider store={store}> 
-    <BrowserRouter>
+     <Router>
     <App />
-    </BrowserRouter>
+    </Router>
     </Provider>
   </React.StrictMode>
 );
